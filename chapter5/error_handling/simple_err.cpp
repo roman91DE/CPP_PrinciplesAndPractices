@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <stdexcept>
+#include <stdexcept>	// include std_lib exception classes
 
 
 // writing my own error checking and handler
@@ -15,6 +15,7 @@ int aggregate_until_manual(const std::vector <int> &vec) {
 
 	lim = std::stoi(instr);
 
+	// error detection:
 	// throw out_of_range exception if condition is true
 	if (lim > vec.size()) {
 		throw std::out_of_range("man - out of range err");
@@ -45,6 +46,7 @@ int aggregate_until(const std::vector <int> &vec) {
 
 	for (int i{0}; i != lim; ++i) {
 
+		// error detection:
 		// throw out_of_range if vector.operator[] will fail to access
 		if (i > vec.size()-1) {
 			throw std::out_of_range("reg - out of range err");
@@ -66,6 +68,7 @@ int main() {
 	}
 	std::cout << std::endl;
 
+	// error handling:
 	// catch exceptions and display message in std::cerr for debugging
 	try {
 		aggregate_until_manual(vec);
@@ -75,6 +78,8 @@ int main() {
 		//return 1;
 	}
 	
+	// error handling:
+	// catch exceptions and display message in std::cerr for debugging
 	try {
 		aggregate_until(vec);
 	}
