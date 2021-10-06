@@ -17,7 +17,7 @@ int aggregate_until_manual(const std::vector <int> &vec) {
 
 	// error detection:
 	// throw out_of_range exception if condition is true
-	if (lim > vec.size()) {
+	if (lim > vec.size()-1) {
 		throw std::out_of_range("man - out of range err");
 		return 1;
 	}
