@@ -5,6 +5,8 @@
 
 struct QuadraticEquation {
 private:
+  // represents the parametes of a quadratic equation 
+  // ax^2 + bx + c = 0
   double a, b, c;
 
 public:
