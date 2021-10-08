@@ -1,0 +1,7 @@
+{
+  "python.testing.pytestArgs": [
+    "exceptNtest"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true
+}
